@@ -4,11 +4,20 @@ namespace 第三章内容
 {
     class Program
     {
-        static void somefun(int[] ints, int i)
+        static void somefun(int[] ints, int y,ref int cd,out int i)
         {
             ints[0] = 100;
             i = 100;
+            cd = 200;
+            y = 23;
         }
+
+        static string fullname(string firstname, string lastname)
+        {
+            return firstname + " " + lastname;
+            
+        }
+        
         static void Main(string[] args)
         {
             phoencustomer mycus = new phoencustomer();
@@ -28,15 +37,18 @@ namespace 第三章内容
             math.Value = 30;
             Console.WriteLine("新的value值为 " + math.Value);
             Console.WriteLine("30的平方为 " + math.GetSquare());
-
-            int i = 0;
+            int cd=0;
+            int i = 0,y=0;
             int[] ints = { 0, 1, 2, 4, 8 };
             Console.WriteLine("i=" + i);
             Console.WriteLine("ints[0]=" + ints[0]);
             Console.WriteLine("calling somefun.");
-            somefun(ints, i);
+            somefun(ints,y, ref cd, out i);
             Console.WriteLine("i=" + i);
-            Console.WriteLine("ints[0]=" + ints[0]);
+            Console.WriteLine("ints[0]=" + ints[0]+" "+cd+" "+y);
+
+            fullname("jhon", "Doe");
+            Console.WriteLine();
         }
     }
 
@@ -86,7 +98,50 @@ namespace 第三章内容
 
     class para
     {
-        
+        void Acc(string aa)
+        {
+
+        }
+        void Acc(int aa)
+        {
+
+        }
+        /*int Iss(int x)
+        {
+            Iss(x, 10);
+        }
+        int Iss(int x,int y)
+         {
+
+        }*/
+
+        public string somepro
+        {
+            get
+            {
+                return "this";
+            }
+            set
+            {
+
+
+            }
+        }
+        private int age;
+            public int Age
+            {
+            get
+            {
+                return age;
+            }
+            set
+            {
+                age = value;
+            }
+
+            }
+
     }
+
 
 }
