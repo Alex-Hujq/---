@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+
 
 namespace 第三章内容
 {
@@ -20,6 +22,7 @@ namespace 第三章内容
         
         static void Main(string[] args)
         {
+            /*
             phoencustomer mycus = new phoencustomer();
             phonecusstruct mycusstruct = new phonecusstruct();
             mycus.firstname = "simon";
@@ -48,7 +51,36 @@ namespace 第三章内容
             Console.WriteLine("ints[0]=" + ints[0]+" "+cd+" "+y);
 
             fullname("jhon", "Doe");
+            Console.WriteLine();*/
+            Console.WriteLine(DateTime.MaxValue);
             Console.WriteLine();
+            Console.WriteLine("userp:backcolor is " + userp.backcolor.ToString());
+            //弱引用
+            WeakReference mathref = new WeakReference(new MathTest());
+            MathTest math;
+            if(mathref.IsAlive)
+            {
+                math=mathref.Target as MathTest;
+                math.Value = 30;
+                Console.WriteLine("value field of math....." + math.Value);
+                Console.WriteLine("square of 30 id  " + math.GetSquare());
+            }
+            else
+            {
+                Console.WriteLine("ref is nor available");
+            }
+            GC.Collect();
+            if(mathref.IsAlive)
+            {
+               math= mathref.Target as MathTest;
+            }
+            else
+            {
+                Console.WriteLine("not available");
+            }
+             //弱引用结束
+
+
         }
     }
 
@@ -79,17 +111,14 @@ namespace 第三章内容
     class MathTest
     {
         public int Value;
-
         public int GetSquare()
         {
             return Value * Value;
         }
-
         public static int GetSquareOf(int x)
         {
             return x * x;
         }
-
         public static double GetPi()
         {
             return 3.14159;
@@ -141,7 +170,98 @@ namespace 第三章内容
 
             }
 
+        public class myclass1
+        {
+            private int num;
+            public myclass1(int num)
+            {
+                this.num = num;
+            }
+        }
+    }
+    class aa
+    {
+        static aa()
+        {
+
+        }
     }
 
+    public class userp
+    {
+        public static readonly Color backcolor;
+
+        static userp()
+        {
+            DateTime now = DateTime.Now;
+            if (now.DayOfWeek == DayOfWeek.Saturday || now.DayOfWeek == DayOfWeek.Sunday)
+                backcolor = Color.Green;
+            else
+                backcolor = Color.Red;
+        }
+        private userp()
+        {
+
+        }
+    }
+
+    class car
+    {
+        private string descri;
+        private uint nwheels;
+        public car(string descri, uint nwheels)
+        {
+            this.descri = descri;
+            this.nwheels = nwheels;
+        }
+        public car(string descri):this(descri,4)
+        {
+            
+        }
+
+    }
+    public class docun
+    {
+        public static readonly uint maxdocum;
+        static docun()
+        {
+           /* maxdocum=DoSomeThingFindOutMaxNumber();  */
+        }
+    }
+    public class Docum
+    {
+        public readonly DateTime createtime;
+        public Docum()
+        {
+            createtime = new DateTime(2002, 1, 1);
+        }  
+    }
+     public class name
+    {
+        static void nn()
+        {
+            var captian = new { firstname="jame",midname="K",lastname="mark"};
+        }
+    }
+    struct dimen
+    {
+        public double Length;
+        public double Width;
+        public dimen (double length,double width)
+        {
+            dimen point = new dimen();
+            point.Length = 3;
+            point.Width = 6;
+            Length = length;
+            Width = width;
+        }
+        public double diagonal
+        {
+            get
+            {
+                return Math.Sqrt(Length * Length + Width * Width);
+            }
+        }
+    }
 
 }
