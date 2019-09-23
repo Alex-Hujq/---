@@ -56,29 +56,36 @@ namespace 第三章内容
             Console.WriteLine();
             Console.WriteLine("userp:backcolor is " + userp.backcolor.ToString());
             //弱引用
-            WeakReference mathref = new WeakReference(new MathTest());
-            MathTest math;
-            if(mathref.IsAlive)
-            {
-                math=mathref.Target as MathTest;
-                math.Value = 30;
-                Console.WriteLine("value field of math....." + math.Value);
-                Console.WriteLine("square of 30 id  " + math.GetSquare());
-            }
-            else
-            {
-                Console.WriteLine("ref is nor available");
-            }
-            GC.Collect();
-            if(mathref.IsAlive)
-            {
-               math= mathref.Target as MathTest;
-            }
-            else
-            {
-                Console.WriteLine("not available");
-            }
-             //弱引用结束
+          /*    WeakReference mathref = new WeakReference(new MathTest());
+              MathTest math;
+              if(mathref.IsAlive)
+              {
+                  math=mathref.Target as MathTest;
+                  math.Value = 30;
+                  Console.WriteLine("value field of math....." + math.Value);
+                  Console.WriteLine("square of 30 id  " + math.GetSquare());
+              }
+              else
+              {
+                  Console.WriteLine("ref is nor available");
+              }
+              GC.Collect();
+              if(mathref.IsAlive)
+              {
+                 math= mathref.Target as MathTest;
+              }
+              else
+              {
+                  Console.WriteLine("not available");
+              }
+            */
+       //弱引用结束
+
+       money cash = new money();
+            cash.Amount = 40M;
+            Console.WriteLine("cash1 " + cash.ToString());
+          //  Console.WriteLine(cash.addtoamount(40M));
+           Console.ReadLine();
 
 
         }
@@ -261,6 +268,33 @@ namespace 第三章内容
             {
                 return Math.Sqrt(Length * Length + Width * Width);
             }
+        }
+    }
+    public class money
+    {
+        private decimal amount;
+        public decimal Amount
+        {
+            get
+            {
+                return amount;
+            }
+            set
+            {
+                amount = value;
+            }
+        }
+        public override string ToString()
+        {
+            return "$" + Amount.ToString();
+        }
+    }
+    public static class moneyexten
+    {
+        public static void addtoamount(this money money,decimal amountToAdd)
+        {
+            money.Amount += amountToAdd;
+           // r//eturn true;
         }
     }
 
