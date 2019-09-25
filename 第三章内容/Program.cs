@@ -84,7 +84,8 @@ namespace 第三章内容
        money cash = new money();
             cash.Amount = 40M;
             Console.WriteLine("cash1 " + cash.ToString());
-          //  Console.WriteLine(cash.addtoamount(40M));
+            cash.addtoamount(40M);
+            Console.WriteLine(cash.ToString());
            Console.ReadLine();
 
 

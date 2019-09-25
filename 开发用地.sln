@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "第一章", "第一章\第�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "第三章内容", "第三章内容\第三章内容.csproj", "{41507641-E6D5-4551-A3F5-D328FA96D37C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "第四章", "第四章\第四章.csproj", "{6A19BEBD-B569-4344-990D-CB11F0CDBE56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{41507641-E6D5-4551-A3F5-D328FA96D37C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{41507641-E6D5-4551-A3F5-D328FA96D37C}.Release|x86.ActiveCfg = Release|Any CPU
 		{41507641-E6D5-4551-A3F5-D328FA96D37C}.Release|x86.Build.0 = Release|Any CPU
+		{6A19BEBD-B569-4344-990D-CB11F0CDBE56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A19BEBD-B569-4344-990D-CB11F0CDBE56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A19BEBD-B569-4344-990D-CB11F0CDBE56}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6A19BEBD-B569-4344-990D-CB11F0CDBE56}.Debug|x86.Build.0 = Debug|Any CPU
+		{6A19BEBD-B569-4344-990D-CB11F0CDBE56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A19BEBD-B569-4344-990D-CB11F0CDBE56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A19BEBD-B569-4344-990D-CB11F0CDBE56}.Release|x86.ActiveCfg = Release|Any CPU
+		{6A19BEBD-B569-4344-990D-CB11F0CDBE56}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

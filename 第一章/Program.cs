@@ -25,7 +25,7 @@ namespace 第一章
                 Console.WriteLine(j + i);
             }
 
-
+            
             /*for (int i = 0; i < args.Length; i++)
             {
                 */
@@ -65,11 +65,32 @@ namespace 第一章
             Console.WriteLine("s1 is now " + s1);
             Console.WriteLine("s2 is now " + s2);
 
-
+            ww(TimeOfDay.moring);
+            return ;
        
 
 
         }
+        public enum TimeOfDay
+        {
+            moring=0,afternoon=1,evening=2
+        }
+        static void ww(TimeOfDay timeofday)
+        {
+            switch(timeofday)
+            {
+                case TimeOfDay.moring:
+                    Console.WriteLine("good morning");
+                    break;
+                case TimeOfDay.afternoon:
+                    Console.WriteLine("good afternoon");
+                    break;
+                case TimeOfDay.evening:
+                    Console.WriteLine("good eventing");
+                    break;
+            }
+        }
+            
     }
     
     
