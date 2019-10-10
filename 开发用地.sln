@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "第五章", "第五章\第�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "第六章", "第六章\第六章.csproj", "{635D2393-7609-43AA-9488-E13272C2E977}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "第七章", "第七章\第七章.csproj", "{723D4256-9B10-40EA-98CE-3528A2B8BF5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "第七章", "第七章\第七章.csproj", "{723D4256-9B10-40EA-98CE-3528A2B8BF5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "第八章", "第八章\第八章.csproj", "{D6559813-5B81-4E98-8CFD-FA5CD3479B3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "第九章", "第九章\第九章.csproj", "{C789C1D2-1CFD-4289-8979-882E5DCBC3F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,22 @@ Global
 		{723D4256-9B10-40EA-98CE-3528A2B8BF5B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{723D4256-9B10-40EA-98CE-3528A2B8BF5B}.Release|x86.ActiveCfg = Release|Any CPU
 		{723D4256-9B10-40EA-98CE-3528A2B8BF5B}.Release|x86.Build.0 = Release|Any CPU
+		{D6559813-5B81-4E98-8CFD-FA5CD3479B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6559813-5B81-4E98-8CFD-FA5CD3479B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6559813-5B81-4E98-8CFD-FA5CD3479B3E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D6559813-5B81-4E98-8CFD-FA5CD3479B3E}.Debug|x86.Build.0 = Debug|Any CPU
+		{D6559813-5B81-4E98-8CFD-FA5CD3479B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6559813-5B81-4E98-8CFD-FA5CD3479B3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6559813-5B81-4E98-8CFD-FA5CD3479B3E}.Release|x86.ActiveCfg = Release|Any CPU
+		{D6559813-5B81-4E98-8CFD-FA5CD3479B3E}.Release|x86.Build.0 = Release|Any CPU
+		{C789C1D2-1CFD-4289-8979-882E5DCBC3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C789C1D2-1CFD-4289-8979-882E5DCBC3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C789C1D2-1CFD-4289-8979-882E5DCBC3F2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C789C1D2-1CFD-4289-8979-882E5DCBC3F2}.Debug|x86.Build.0 = Debug|Any CPU
+		{C789C1D2-1CFD-4289-8979-882E5DCBC3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C789C1D2-1CFD-4289-8979-882E5DCBC3F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C789C1D2-1CFD-4289-8979-882E5DCBC3F2}.Release|x86.ActiveCfg = Release|Any CPU
+		{C789C1D2-1CFD-4289-8979-882E5DCBC3F2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
