@@ -32,8 +32,65 @@ namespace 第十章
                new Racer(12, "Jochen", "Rindt", "Austria", 6),
                new Racer(22, "Ayrton", "Senna", "Brazil", 41) });
 
+            //
+            racers.Insert(3, new Racer(6, "Phil", "Hill", "USA", 3));
+            //
+            Racer r1 = racers[3];
+            for (int i = 0; i < racers.Count; i++)
+            {
+                Console.WriteLine(racers[i]);
+            }
+            Console.WriteLine("   ");
+            foreach (Racer e in racers)
+            {
+                
+                Console.WriteLine(e);
+            }
+            //
+            racers.RemoveAt(3);
+            if(!racers.Remove(graham))
+            {
+                Console.WriteLine("object not found in collection");
+            }
+            int index = 3;
+            int count = 5;
+            racers.RemoveRange(index, count);
+            //
+            int index1 = racers.IndexOf(mario);
+            //public int FindIndex(Predicate<T> match);
+
+           // racers.Sort(new RacerComparer(RacerComparer));
             
-            racers.Insert(3, Racer(6, "Phil", "Hill", "USA", 3));
         }
     }
+
+    public class FindCountry
+    {
+        public FindCountry(string country)
+        {
+            this.country = country;
+        }
+        private string country;
+        public bool FindCountryPredicate(Racer racer)
+        {
+            return racer.Country == country;
+        }
+        
+    }
+
+
+
+    /*public class List<T>:IList<T>
+    {
+        private T[] items;
+        public void Foreach(Action<T> action)
+        {
+            if (action == null) throw new ArgumentNullException("action");
+            foreach(T item in items)
+            {
+                action(items);
+            }
+        }
+        public delegate void Action<T>(T obj);
+    }*/
 }
