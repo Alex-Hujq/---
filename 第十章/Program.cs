@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
+using System.Threading;
 
 namespace 第十章
 {
@@ -54,13 +56,81 @@ namespace 第十章
             }
             int index = 3;
             int count = 5;
-            racers.RemoveRange(index, count);
+           // racers.RemoveRange(index, count);
             //
-            int index1 = racers.IndexOf(mario);
+            //int index1 = racers.IndexOf(mario);
             //public int FindIndex(Predicate<T> match);
 
-           // racers.Sort(new RacerComparer(RacerComparer));
+            // racers.Sort(new RacerComparer(RacerComparer));
+            /*
+            List<Person> persons = 
+                racers.ConvertAll<Person>(
+                    r => Person(r.FirstName + "" + r.LastName));
+            */
+
+            var dm = new DocumentManager();
+            ProcessDocuments.Start(dm);
+            for (int i = 0; i < 10;i++)
+            {
+                var doc = new Document1("doc " + i.ToString(), "content");
+                dm.AddDocument(doc);
+                Console.WriteLine("added document  {0}", doc.Title);
+                Thread.Sleep(new Random().Next(20));
+            }
+            //队列
+
+            var alphabet = new Stack<char>();
+            alphabet.Push('A');
+            alphabet.Push('B');
+            alphabet.Push('C');
+            foreach(char item in alphabet)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            Console.WriteLine("second iteration:  ");
+            while(alphabet.Count>0)
+            {
+                Console.Write(alphabet.Pop());
+            }
+            Console.WriteLine();
+            //栈
             
+            var pdm = new PriorityDocumentManager();
+            pdm.AddDocument(new Document("one", "Sample", 8));
+            pdm.AddDocument(new Document("two", "Sample", 3));
+            pdm.AddDocument(new Document("three", "Sample", 4));
+            pdm.AddDocument(new Document("four", "Sample", 8));
+            pdm.AddDocument(new Document("five", "Sample", 1));
+            pdm.AddDocument(new Document("six", "Sample", 9));
+            pdm.AddDocument(new Document("seven", "Sample", 1));
+            pdm.AddDocument(new Document("eight", "Sample", 1));
+
+            pdm.DisplayAllNodes();
+            
+            //链表
+            var books = new SortedList<string, string>();
+            books.Add("Professional WPF Programming", "978–0–470–04180–2");
+            books.Add("Professional ASP.NET MVC 3", "978–1–1180–7658–3");
+
+            books["Beginning Visual C# 2010"] = "978–0–470-50226-6";
+            books["Professional C# 4 and .NET 4"] = "978–0–470–50225–9";
+
+            foreach (KeyValuePair<string, string> book in books)
+            {
+                Console.WriteLine("{0}, {1}", book.Key, book.Value);
+            }
+
+            foreach (string isbn in books.Values)
+            {
+                Console.WriteLine(isbn);
+            }
+
+            foreach (string title in books.Keys)
+            {
+                Console.WriteLine(title);
+            }
+
         }
     }
 
